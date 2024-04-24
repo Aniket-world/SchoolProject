@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(132deg, #ec5218, #1665c1);
+            background-size: 400% 400%;
+            animation: Gradient 10s ease infinite;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        @keyframes Gradient {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+        .box {
+            width: 300px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.1);
+            margin: 10px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .field {
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .signin-button {
+            margin-top: 10px;
+            text-align: center;
+            font-size: 0.8em;
+            color: #888;
+        }
+        .signin-button a {
+            color: #1665c1;
+        }
+        h2 {
+            text-align: center;
+        }
+        .common-class {
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>Sign in</h2>
+        <form action="/submit_form/" method="post">
+            
+            <label for="Name">Name:</label>
+            <input type="text" id="Name" name="Name" class="common-class">
+
+            <label for="Class">Class:</label>
+            <input type="text" id="class-no" name="Class" class="common-class">
+
+            <label for="Section">Section:</label>
+            <select id="section" name="Section" class="common-class">
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+            </select>
+
+            <label for="Gr-number">Gr No.(last four digits)</label>
+            <input type="text" id="Gr_num" name="Gr_num" class="common-class">
+
+            <label for="Pass1">Password:</label>
+            <input type="text" id="Password" name="Pass1" class="common-class">
+
+            <label for="Pass2">Confirm Password:</label>
+            <input type="text" id="Password" name="Pass2" class="common-class">
+
+            <input type="submit" value="Submit" class="common-class">
+        </form>
+        <div class="signin-button">
+            Already signed in? <a href="#">Click here</a>
+        </div>
+    </div>
+</body>
+</html>
